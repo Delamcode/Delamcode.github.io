@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('backround_1.jpeg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+#reset {
+  margin-top: 5%;
+  position: relative;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+a {
+  width: 6em;
+  padding: 1em;
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  background-color: #EEEEEE;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+
+a:hover {
+  background-color: #FFFFFF;
+}
+
+a:active {
+  background-color: #000000;
+}
+
+p {
+  text-align: center;
+}
+
+.inline-container {
+  text-align: center;
+}
+
+.inline-elements {
+  display: inline-block;
+}

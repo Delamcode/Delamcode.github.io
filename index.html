@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>RPS</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="icon_web.png" type="image/png" sizes="32x32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+
+    <h1>Rock, Paper, Scissors?</h1>
+    <a id="reset" onclick="resetAll()">Reset All</a>
+    <p id="win-lose">Choose one:</p>
+    <div class="inline-container" style="margin-top: 5%;">
+      <div class="inline-elements" style="margin-right: 15%;">
+        <p id="player-score">0</p>
+        <p>&#128578;</p>
+      </div>
+      <p class="inline-elements" id="comp-choice">Computer Choice</p>
+      <div class="inline-elements" style="margin-left: 15%;">
+        <p id="comp-score">0</p>
+        <p>&#129302;</p>
+      </div>
+    </div>
+    <div class="inline-container" style="margin-top: 15%;">
+        <a href="#" onclick="rockPressed()">Rock</a>
+        <a href="#" onclick="paperPressed()">Paper</a>
+        <a href="#" onclick="scissorsPressed()">Scissors</a>
+    </div>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
