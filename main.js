@@ -12,7 +12,7 @@ function resetAll() {
     document.getElementById("comp-score").innerHTML = comscore.toString();
     document.getElementById("player-score").innerHTML = playerscore.toString();
     document.getElementById("comp-choice").innerHTML = "Computer Choice";
-    document.getElementById("win-lose").innerHTML = "Choose one";
+    document.getElementById("win-lose").innerHTML = "Choose one:";
     
 }
 function rockPressed() {
