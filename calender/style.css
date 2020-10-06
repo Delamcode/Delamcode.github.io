@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -21,8 +22,7 @@ body {
   text-align: center;
   border-radius: 8px;
   overflow: hidden;
-  -webkit-box-reflect: below 1px
-    linear-gradient(transparent, transparent, #000400);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #000400);
 }
 
 .calendar #monthName {
