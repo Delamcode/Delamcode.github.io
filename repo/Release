@@ -1,8 +1,8 @@
-Origin: (Modify)
-Label: (Modify)
+Origin: delamcode.github.io/repo
+Label: Delamcode Home Repo
 Suite: stable
 Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm
 Components: main
-Description: (Modify)
+Description: Random Text
