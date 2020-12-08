@@ -4,7 +4,7 @@ Version: 0.0
 Description: This is a empty tweak. Installing will give you a 403 error!
 Maintainer: developer.dhaule@gmail.com
 Author: developer.dhaule@gmail.com
-Section: tweaks
-Depends: ios < 1.0
+Section: Tweaks
+Depends: 
 Filename: .debs/
 Size: 0
