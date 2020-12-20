@@ -1,7 +1,7 @@
-Package: com.delamcode.empty
-Name: Empty
-Version: 0.0
-Description: This is a empty tweak. Installing will give you a 403 error!
+Package: com.delamcode.spaceremoverlite
+Name: Space Remover lite
+Version: 0.0.1
+Description: This is a empty tweak. Installing will give you a 404 error!
 Maintainer: developer.dhaule@gmail.com
 Author: developer.dhaule@gmail.com
 Section: Tweaks

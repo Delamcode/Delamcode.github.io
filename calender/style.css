@@ -55,3 +55,8 @@ body {
   font-weight: 700;
   color: #999;
 }
+
+.calender #countdown {
+  font-size: 20px;
+  font-weight: 700;
+}

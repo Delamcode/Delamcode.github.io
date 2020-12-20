@@ -1,3 +1,5 @@
+//This is the calender code
+
 const lang = navigator.language;
 
         let date = new Date();
@@ -19,3 +21,4 @@ const lang = navigator.language;
         document.getElementById('dayNumber').innerHTML = dayNumber;
 
         document.getElementById('year').innerHTML = year;
+
