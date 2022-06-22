@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Percentages of my Life</h2>
+
+<p id="time">Do Something</p>
+<p id="load">fail</p>
+
+<script>
+
+var t = 1;
+document.getElementById("load").innerHTML = "loading...";
+var o = setInterval(load, 1000);
+
+    function load() {
+t += 1;
+if (t > 5) {
+document.getElementById("load").innerHTML = "loaded";
+clearInterval(o);
+}
+}
+
+
+var h = setInterval(count, 5000);
+
+let u = 7.5 //this is the start time (24 hour time)
+let i = 15.5 //this is the end time (24 hour time)
+let p = 15.5 //this is the start time #2 (24 hour time)
+let n = 21 //this is the end time #2 (24 hour time)
+
+
+let f = (i - u) / 100
+function count() {
+var current = new Date();
+var x = current.getHours();
+var y = current.getMinutes();
+var z = current.getSeconds();
+y /= 60
+z /= 6000
+var v = x + y + z - u
+var a = Math.round(v / f * 10)/10;
+var b = Math.round(v / f);
+var c = 100 - b
+const bar = 'l';
+const ty = 'i'
+if (a < 100 & a > 0)
+{
+    if (((a - b) * 10) == 0) {
+        document.getElementById("time").innerHTML = a.toString() + ".0" + "&percnt;" + "&#160;" + (`${bar.repeat(b)}`) + (`${ty.repeat(c)}`);
+    } else {
+        document.getElementById("time").innerHTML = a.toString() + "&percnt;" + "&#160;" + (`${bar.repeat(b)}`) + (`${ty.repeat(c)}`);
+    }
+} else if ((v+u) > p & (v+u) < n) {
+let f = (n - p) /100
+var a = Math.round((v+u-p) / f * 10)/10;
+var b = Math.round((v+u-p) / f);
+var c = 100 - b
+    if (((a - b) * 10) == 0) {
+        document.getElementById("time").innerHTML = a.toString() + ".0" + "&percnt;" + "&#160;" + (`${bar.repeat(b)}`) + (`${ty.repeat(c)}`);
+    } else {
+        document.getElementById("time").innerHTML = a.toString() + "&percnt;" + "&#160;" + (`${bar.repeat(b)}`) + (`${ty.repeat(c)}`);
+    }
+}
+}
+
+</script>
+
+<style>
+h2 {
+font-size: 4.5em;
+font-family: Arial, Helvetica, sans-serif;
+}
+p {
+font-size: 3.675em;
+font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+
+</body>
+</html> 
