@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>File Sharing</title>
+    <style>
+      /* Add some basic styling to the form */
+      form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      /* Style the file input element and submit button */
+      input[type='file'] {
+        border: none;
+        background: #eee;
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      button[type='submit'] {
+        border: none;
+        background: #333;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 16px;
+      }
+
+      /* Use the prefers-color-scheme media query to apply different styles based on the user's preferred color scheme */
+      @media (prefers-color-scheme: dark) {
+        /* Invert the colors for dark mode */
+        body {
+          background: #333;
+          color: #fff;
+        }
+
+        input[type='file'] {
+          background: #444;
+          color: #eee;
+        }
+
+        button[type='submit'] {
+          background: #eee;
+          color: #333;
+        }
+      }
+      @media (max-width: 768px) {
+  /* Stack the form elements vertically on small screens */
+  form {
+    flex-direction: column;
+  }
+
+  /* Increase the size of the buttons */
+  input[type='file'],
+button[type='submit'] {
+  width: 100% !important; /* Make the buttons occupy the full width of the container */
+  height: 48px !important; /* Increase the height of the buttons */
+  font-size: 20px !important; /* Increase the font size */
+}
+}
+    </style>
+  </head>
+  <body>
+    <form id="upload-form">
+      <input type="file" id="file-input" ref={fileInput} />
+      <button type="submit">Upload</button>
+    </form>
+    <script>
+      const fileInput = document.getElementById('file-input');
+      const form = document.getElementById('upload-form');
+
+      // Create an RTCPeerConnection on each device
+      const peerConnection = new RTCPeerConnection();
+
+      // Add an event listener for the 'submit' event of the form
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        // Get the selected file from the file input element
+        const file = fileInput.files[0];
+
+        // Read the contents of the file as a binary string
+        const reader = new FileReader();
+        reader.readAsArrayBuffer(file);
+        reader.onload = () => {
+          // Use the WebSocket connection to send the file data to the other device
+          peerConnection.send(reader.result);
+        };
+      });
+
+      // Create an offer on the initiator device
+      const offer = await peerConnection.createOffer();
+
+      // Set the local description on the initiator device
+      await peerConnection.setLocalDescription(offer);
+
+      // Set the remote description on the responder device
+      await peerConnection.setRemoteDescription(offer);
+
+      // Create an answer on the responder device
+      const answer = await peerConnection.createAnswer();
+
+      // Set the local description on the responder device
+      await peerConnection.setLocalDescription(answer);
+
+      // Set the remote description on the initiator device
+      await peerConnection.setRemoteDescription(answer);
+
+      // The connection is now established and the devices can begin sending data
+
+      // Add an event listener for the 'message' event of the WebSocket connection
+      peerConnection.addEventListener('message', (event) => {
+        // Use the FileReader API to write the received data to a file
+        const fileReader = new FileReader();
+        fileReader.readAsArrayBuffer(event.data);
+        fileReader.onload = () => {
+          // Use the FileWriter API to write the ArrayBuffer to a file
+          const fileWriter = new FileWriter('received-file.txt');
+          fileWriter.write(fileReader.result);
+          fileWriter.close();
+        };
+      });
+    </script>
+  </body>
+</html>
