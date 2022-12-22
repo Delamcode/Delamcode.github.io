@@ -1,210 +1,28 @@
-<!-- HTML page for selecting and uploading files -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>File Sharing</title>
-  </head>
-  <body>
-    <!-- Toggle button for switching between dark and light mode -->
-<label class="switch">
-  <input type="checkbox" id="dark-mode-toggle">
-  <span class="slider round"></span>
-</label>
+ <html>
+ <head>
 
-    <!-- Form for selecting and uploading files -->
-    <form id="upload-form">
-      <input type="file" id="file-input" />
-      <button type="submit">Upload</button>
-    </form>
+ <title>Delamcode</title>
+ <link rel="stylesheet" href="main.css">
+ <link rel="icon" href="delamStar.png" type="image/png" sizes="32x32">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="robots" content="noindex">
 
-    <!-- Progress bar for showing progress of file transfer -->
-    <div id="progress-bar"></div>
+ </head>
+ <body>
+     <div class="bannerImg"></div>
+     <h1 id="Title">Welcome to Delamcode!</h1>
 
-    <!-- Script to handle file selection and uploading -->
-    <script>
-      // Get references to form and file input elements
-      const form = document.getElementById('upload-form');
-      const fileInput = document.getElementById('file-input');
 
-      // Handle form submission
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-
-        // Get the selected file
-        const file = fileInput.files[0];
-        if (!file) {
-          return;
-        }
-
-        // Create an RTCPeerConnection to establish a connection with the other device
-        const peerConnection = new RTCPeerConnection();
-
-        // Set up a WebSocket to send the file data over the connection
-        const socket = new WebSocket('ws://localhost:3000');
-        socket.binaryType = 'arraybuffer';
-
-        // Send the file over the WebSocket when the connection is open
-        socket.addEventListener('open', () => {
-          // Send the file name and size as the first message
-          const fileInfo = { name: file.name, size: file.size };
-          socket.send(JSON.stringify(fileInfo));
-
-          // Send the file data in chunks over the WebSocket
-          const reader = new FileReader();
-          let offset = 0;
-          const chunkSize = 16384;
-          reader.addEventListener('load', () => {
-            offset += chunkSize;
-            socket.send(reader.result);
-            updateProgress(offset, file.size);
-            if (offset < file.size) {
-              readNextChunk();
-            }
-          });
-          const readNextChunk = () => {
-            const slice = file.slice(offset, offset + chunkSize);
-            reader.readAsArrayBuffer(slice);
-          };
-          readNextChunk();
-        });
-      });
-
-      // Update the progress bar to show the progress of the file transfer
-      const progressBar = document.getElementById('progress-bar');
-      const updateProgress = (current, total) => {
-        const percent = (current / total) * 100;
-        progressBar.style.width = `${percent}%`;
-      };
-    </script>
-    <style>
-/* Dark mode styles */
-body.dark {
-  background-color: #333;
-  color: #fff;
-}
-
-/* Light mode styles */
-body.light {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Toggle button styles */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-/* Form styles */
-#upload-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-#file-input {
-  font-size: 16px;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #eee;
-}
-
-button[type="submit"] {
-  font-size: 16px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #2196f3;
-  color: #fff;
-  cursor: pointer;
-}
-button[type="submit"]:hover {
-  background-color: #1976d2;
-}
-
-/* Progress bar styles */
-#progress-bar {
-  width: 0;
-  height: 20px;
-  background-color: #2196f3;
-  border-radius: 10px;
-  transition: width .2s;
-}
-    </style>
-    <!-- Script to handle switching between dark and light mode -->
-<script>
-  // Get reference to dark mode toggle button
-  const toggleButton = document.getElementById('dark-mode-toggle');
-
-  // Add event listener to toggle button to switch between dark and light mode
-  toggleButton.addEventListener('change', e => {
-    const body = document.querySelector('body');
-    if (e.target.checked) {
-      body.classList.add('dark');
-      body.classList.remove('light');
-    } else {
-      body.classList.add('light');
-      body.classList.remove('dark');
-    }
-  });
-</script>
-
-  </body>
-</html>
-
+         <p id="Heading">Links:</p>
+         <a class="links" href="/rps/">RPS Game!</a>
+         <a class="links" href="https://sites.google.com/view/thehauletimes/home">The Haule Times Home</a>
+         <a class="links" href="/places/">Traveling/Over the Years</a>
+         <a class="links" href="https://sites.google.com/view/year-inreview/home">Year in Review</a>
+         <a class="links" href="https://sites.google.com/view/helpandmore/home">Help and more</a>
+         <a class="links" href="http://192.168.1.24:8080">Musoc</a>
+         <a class="links" href="http://192.168.1.24:8090">Fox Maze Game!</a>
+         <a class="links" href="https://delamcode.github.io/calender/">CSS Calender</a>
+         <a class="links" id="lastPadd" href="https://delamcode.github.io/comingsoon">Testing Site</a>
+ </body>
+ </html>
