@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Manager</title>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  <p>Test</p>
+  <form>
+    <label for="new-task">New Task:</label><br>
+    <input type="text" id="new-task" placeholder="Enter new task here"><br>
+    <label for="due-date">Due Date:</label><br>
+    <input type="date" id="due-date"><br>
+    <label for="priority">Priority:</label><br>
+    <select id="priority">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select><br>
+    <input type="checkbox" id="repeat" name="repeat">
+    <label for="repeat">Repeat</label><br>
+    <label for="repeat-frequency">Repeat Frequency:</label><br>
+    <select id="repeat-frequency">
+      <option value="daily">Daily</option>
+      <option value="weekly">Weekly</option>
+      <option value="monthly">Monthly</option>
+    </select><br>
+    <button type="submit">Add Task</button>
+  </form> 
+
+  <h2>Tasks</h2>
+  <ul id="task-list">
+    <!-- Tasks will be added here dynamically -->
+  </ul>
+
+  <h2>Completed Tasks</h2>
+  <ul id="completed-task-list">
+    <!-- Completed tasks will be added here dynamically -->
+  </ul>
+
+  <h2>Skipped Tasks</h2>
+  <ul id="skipped-task-list">
+    <!-- Skipped tasks will be added here dynamically -->
+  </ul>
+
+  <button id="clear-tasks">Clear Tasks</button>
+
+  <script>
+    // Add event listener to the form to handle new task submissions
+    const taskForm = document.querySelector('form');
+    taskForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // prevent the form from submitting and refreshing the page
+
+      // Get the values of the task, due date, priority, repeat, and repeat frequency from the form
+      const taskInput = document.querySelector('#new-task');
+      const task = taskInput.value;
+      const dueDateInput = document.querySelector('#due-date');
+      const dueDate = dueDateInput.value;
+      const priorityInput = document.querySelector('#priority');
+      const priority = priorityInput.value;
+      const repeatInput = document.querySelector('#repeat');
+      const repeat = repeatInput.checked;
+      const repeatFrequencyInput = document.querySelector('#repeat-frequency');
+      const repeatFrequency = repeatFrequencyInput.value;
+
+            // Create a new list item to hold the task
+      const taskList = document.querySelector('#task-list');
+      const li = document.createElement('li');
+      li.innerHTML = task;
+
+      // Add a class to the list item based on the priority
+      if (priority === 'low') {
+        li.classList.add('low-priority');
+      } else if (priority === 'medium') {
+        li.classList.add('medium-priority');
+      } else {
+        li.classList.add('high-priority');
+      }
+
+            // Add a "complete" button to the list item
+      const completeButton = document.createElement('button');
+      completeButton.innerHTML = 'Complete';
+      completeButton.addEventListener('click', () => {
+        // Move the list item to the completed tasks list
+        const completedTaskList = document.querySelector('#completed-task-list');
+        completedTaskList.appendChild(li);
+
+        // Add an "undo" button to the list item
+        const undoButton = document.createElement('button');
+        undoButton.innerHTML = 'Undo';
+        undoButton.addEventListener('click', () => {
+          // Move the list item back to the task list
+          taskList.appendChild(li);
+
+          // Add the "complete" and "skip" buttons back to the list item
+          li.appendChild(completeButton);
+          li.appendChild(skipButton);
+
+          // Remove the "undo" button
+          undoButton.remove();
+        });
+        li.appendChild(undoButton);
+
+        // Remove the "complete" and "skip" buttons
+        completeButton.remove();
+        skipButton.remove();
+      });
+      li.appendChild(completeButton);
+
+      // Add a "skip" button to the list item
+      const skipButton = document.createElement('button');
+      skipButton.innerHTML = 'Skip';
+      skipButton.addEventListener('click', () => {
+        // Move the list item to the skipped tasks list
+        const skippedTaskList = document.querySelector('#skipped-task-list');
+        skippedTaskList.appendChild(li);
+
+        // Add an "undo" button to the list item
+        const undoButton = document.createElement('button');
+        undoButton.innerHTML = 'Undo';
+        undoButton.addEventListener('click', () => {
+          // Move the list item back to the task list
+          taskList.appendChild(li);
+
+          // Add the "complete" and "skip" buttons back to the list item
+          li.appendChild(completeButton);
+          li.appendChild(skipButton);
+
+          // Remove the "undo" button
+          undoButton.remove();
+        });
+        li.appendChild(undoButton);
+
+        // Remove the "complete" and "skip" buttons
+        completeButton.remove();
+        skipButton.remove();
+      });
+      li.appendChild(skipButton);
+
+      // Add a "skip" button to the list item
+      const skipButton = document.createElement('button');
+      skipButton.innerHTML = 'Skip';
+      skipButton.addEventListener('click', () => {
+        // Move the list item to the skipped tasks list
+        const skippedTaskList = document.querySelector('#skipped-task-list');
+        skippedTaskList.appendChild(li);
+
+        // Add an "undo" button to the list item
+        const undoButton = document.createElement('button');
+        undoButton.innerHTML = 'Undo';
+        undoButton.addEventListener('click', () => {
+          // Move the list item back to the task list
+          taskList.appendChild(li);
+
+          // Re-add the "complete" and "skip" buttons
+          li.appendChild(completeButton);
+          li.appendChild(skipButton);
+
+          // Remove the "undo" button
+          undoButton.remove();
+        });
+        li.appendChild(undoButton);
+
+      // Add the list item to the task list
+      taskList.appendChild(li);
+
+            // Store the task in a cookie
+      const date = new Date();
+      date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000)); // store the cookie for 30 days
+      document.cookie = `task=${task}; expires=${date.toUTCString()}; path=/`;
+      document.cookie = `dueDate=${dueDate}; expires=${date.toUTCString()}; path=/`;
+      document.cookie = `priority=${priority}; expires=${date.toUTCString()}; path=/`;
+      document.cookie = `repeat=${repeat}; expires=${date.toUTCString()}; path=/`;
+      document.cookie = `repeatFrequency=${repeatFrequency}; expires=${date.toUTCString()}; path=/`;
+
+      // Reset the form
+      taskForm.reset();
+    });
+
+    // Add event listener to the "Clear Tasks" button to clear the cookies
+    const clearTasksButton = document.querySelector('#clear-tasks');
+    clearTasksButton.addEventListener('click', () => {
+      const date = new Date();
+      date.setTime(date.getTime() - 1); // set the expiration date of the cookies to the past to delete them
+      document.cookie = `task=; expires=${date.toUTCString()}; path=/`;
+      document.cookie = `dueDate=; expires=${date.toUTCString()}; path=/`;
+      document.cookie = `priority=; expires=${date.toUTCString()}; path=/`;
+      document.cookie = `repeat=; expires=${date.toUTCString()}; path=/`;
+      document.cookie = `repeatFrequency=; expires=${date.toUTCString()}; path=/`;
+    });
+  </script>
+</body>
+</html>
