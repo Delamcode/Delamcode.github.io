@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Force Download Video</title>
+  <meta charset="UTF-8">
+  <title>Download Zip</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </head>
 <body>
-	<h1>Force Download Video</h1>
-	<label for="url">Enter video URL:</label><br>
-	<input type="text" id="url" name="url"><br><br>
-	<button onclick="downloadVideo()">Download</button>
+  <form>
+    <label for="url">Enter URL:</label><br>
+    <input type="text" id="url" name="url"><br>
+    <button type="button" onclick="downloadZip()">Download</button>
+  </form>
 
-	<script type="text/javascript">
-		function downloadVideo() {
-			var url = document.getElementById("url").value;
-			var a = document.createElement("a");
-			a.href = url;
-			a.download = url.split("/").pop();
-			document.body.appendChild(a);
-			a.click();
-			document.body.removeChild(a);
-		}
-	</script>
+  <script>
+    function downloadZip() {
+      const url = document.getElementById("url").value;
+      const zip = new JSZip();
+      zip.file("file.txt", url);
+      zip.generateAsync({type:"blob"})
+        .then(function(content) {
+          saveAs(content, "example.zip");
+        });
+    }
+  </script>
 </body>
 </html>
