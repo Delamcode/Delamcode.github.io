@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Force Download Video</title>
+</head>
+<body>
+	<h1>Force Download Video</h1>
+	<label for="url">Enter video URL:</label><br>
+	<input type="text" id="url" name="url"><br><br>
+	<button onclick="downloadVideo()">Download</button>
+
+	<script type="text/javascript">
+		function downloadVideo() {
+			var url = document.getElementById("url").value;
+			var a = document.createElement("a");
+			a.href = url;
+			a.download = url.split("/").pop();
+			document.body.appendChild(a);
+			a.click();
+			document.body.removeChild(a);
+		}
+	</script>
+</body>
+</html>
