@@ -17,10 +17,15 @@
     function downloadZip() {
       const url = document.getElementById("url").value;
       const zip = new JSZip();
-      zip.file("file.txt", url);
-      zip.generateAsync({type:"blob"})
-        .then(function(content) {
-          saveAs(content, "example.zip");
+      const filename = url.split("/").pop();
+      fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+          zip.file(filename, blob);
+          zip.generateAsync({type:"blob"})
+            .then(function(content) {
+              saveAs(content, "example.zip");
+            });
         });
     }
   </script>
