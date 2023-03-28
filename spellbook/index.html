@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot</title>
+	<style type="text/css">
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial;
+			font-size: 14px;
+			line-height: 1.6em;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			margin: 0 auto;
+			max-width: 800px;
+			padding: 20px;
+		}
+		.chatbox {
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,.1);
+			margin-bottom: 20px;
+			padding: 20px;
+			position: relative;
+		}
+		.chatbox .typing {
+			animation-duration: .8s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+			animation-name: typing;
+			animation-timing-function: linear;
+			bottom: -15px;
+			color: #999;
+			font-size: 12px;
+			left: 10px;
+			position: absolute;
+		}
+		.chatbox .typing span {
+			display: inline-block;
+			height: 10px;
+			margin-right: 5px;
+			width: 10px;
+		}
+		.chatbox .typing span:nth-child(1) {
+			animation-delay: .1s
+		}
+		.chatbox .typing span:nth-child(2) {
+			animation-delay: .2s
+		}
+		.chatbox .typing span:nth-child(3) {
+			animation-delay: .3s
+		}
+		
+        /* Chat bubble styles */
+        .chatbox .chat-bubble {
+            background-color:#f1f1f1; 
+            border-radius:5px; 
+            padding:10px; 
+            margin-bottom:10px; 
+            position:relative; 
+        }
+        .chatbox .chat-bubble::after {
+            content:""; 
+            position:absolute; 
+            right:-10px; 
+            top:-5px; 
+            border-style:solid; 
+            border-width:.5em .5em 0 0; 
+            border-color:#f1f1f1 transparent transparent transparent; 
+        }
+        .chatbox .chat-bubble img {
+            border-radius:50%; 
+            float:left; 
+            margin-right:.5em; 
+        }
+        .chatbox .chat-bubble p {
+            margin:.5em 0; 
+        }
+        /* Chat bubble styles end */
+        
+        /* User input styles */
+        input[type=text] {
+            width:auto; 
+            padding:.5em; 
+            margin-right:.5em; 
+            border-radius:.3em; 
+            border:none; 
+            box-shadow:none; 
+        }
+        input[type=submit] {
+            padding:.5em 1em; 
+            background-color:#333; 
+            color:#fff; 
+            border:none; 
+            border-radius:.3em; 
+        }
+        /* User input styles end */
+        
+        /* Clearfix */
+        .clearfix::after {
+          content:""; 
+          clear:both; 
+          display:block;  
+        }
+        
+        /* Animations */
+        @keyframes typing {
+        	from {transform : translate(0,0);}
+        	to {transform : translate(0,-3px);}
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="chatbox">
+     <div class="chat-bubble">
+      <p>Hi there! How can I help you?</p>
+     </div>
+     <div class="typing"><span></span><span></span><span></span></div>
+    </div>
+    <form id="user-input" class="clearfix">
+     <input type="text" name="user-message" placeholder="Type your message here...">
+     <input type="submit" value="Send">
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
