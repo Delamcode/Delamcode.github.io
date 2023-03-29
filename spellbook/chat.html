@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Box</title>
+  <style>
+    .chatbox {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .chatlog {
+      flex-grow: 1;
+      overflow-y: scroll;
+    }
+
+    .chat-message {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .chat-message-content {
+      background-color: #f1f0f0;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .chat-form {
+      display: flex;
+    }
+
+    .chat-form input[type=text] {
+      flex-grow: 1;
+    }
+
+    .chat-form button[type=submit] {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbox">
+    <div class="chatlog">
+      <div class="chat-message">
+        <div class="chat-message-content">
+          <p>Hello!</p>
+        </div>
+      </div>
+    </div>
+    <form class="chat-form">
+      <input type="text" placeholder="Type your message here...">
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const chatlog = document.querySelector('.chatlog');
+    const form = document.querySelector('.chat-form');
+    const input = document.querySelector('.chat-form input[type=text]');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const message = input.value.trim();
+
+      if (message) {
+        const chatMessage = document.createElement('div');
+        chatMessage.classList.add('chat-message');
+
+        const chatMessageContent = document.createElement('div');
+        chatMessageContent.classList.add('chat-message-content');
+
+        const p = document.createElement('p');
+        p.textContent = message;
+
+        chatMessageContent.appendChild(p);
+        chatMessage.appendChild(chatMessageContent);
+
+        chatlog.appendChild(chatMessage);
+
+        input.value = '';
+        input.focus();
+
+        chatlog.scrollTop = chatlog.scrollHeight;
+      }
+    });
+  </script>
+</body>
+</html>
