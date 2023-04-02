@@ -3,46 +3,15 @@
 <head>
   <title>Chat Box</title>
   <style>
-    .chatbox {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-
-    .chatlog {
-      flex-grow: 1;
-      overflow-y: scroll;
-      font-family: Arial, sans-serif;
-    }
-
-    .chat-message {
-      display: flex;
-      margin-bottom: 10px;
-      font-family: Arial, sans-serif;
-    }
-
-    .chat-message-content {
-      background-color: #f1f0f0;
-      border-radius: 10px;
-      padding: 10px;
-      font-family: Arial, sans-serif;
-    }
-
-    .chat-form {
-      display: flex;
-      font-family: Arial, sans-serif;
-    }
-
-    .chat-form input[type=text] {
-      flex-grow: 1;
-      font-family: Arial, sans-serif;
-    }
-
-    .chat-form button[type=submit] {
-      margin-left: 10px;
-      font-family: Arial, sans-serif;
-    }
+    body { font-family: Arial, sans-serif; }
+    .chatbox { display: flex; flex-direction: column; height: 100%; }
+    .chatlog { flex-grow: 1; overflow-y: scroll; }
+    .chat-message { display: flex; margin-bottom: 10px; }
+    .chat-message-content { background-color: #f1f0f0; border-radius: 10px; padding: 10px; white-space: pre-wrap; }
+    .chat-form { display: flex; }
+    .chat-form input[type=text] { flex-grow: 1; }
+    .chat-form button[type=submit] { margin-left: 10px; }
+    .dark-mode { position: absolute; top: 10px; right: 10px; }
   </style>
 </head>
 <body>
@@ -55,42 +24,48 @@
       </div>
     </div>
     <form class="chat-form">
-      <input type="text" placeholder="Type your message here...">
+      <input type="text" id="leftInput" placeholder="Type your message here...">
+      <input type="text" id="rightInput" placeholder="Type your message here...">
       <button type="submit">Send</button>
     </form>
   </div>
+  <button class="dark-mode" onclick="toggleDarkMode()">Dark Mode</button>
 
   <script>
     const chatlog = document.querySelector('.chatlog');
     const form = document.querySelector('.chat-form');
-    const input = document.querySelector('.chat-form input[type=text]');
+    const leftInput = document.getElementById('leftInput');
+    const rightInput = document.getElementById('rightInput');
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      addMessage(leftInput, 'left');
+      addMessage(rightInput, 'right');
+    });
 
+    function addMessage(input, side) {
       const message = input.value.trim();
-
       if (message) {
         const chatMessage = document.createElement('div');
-        chatMessage.classList.add('chat-message');
-
+        chatMessage.classList.add('chat-message', side);
         const chatMessageContent = document.createElement('div');
         chatMessageContent.classList.add('chat-message-content');
-
         const p = document.createElement('p');
         p.textContent = message;
-
         chatMessageContent.appendChild(p);
         chatMessage.appendChild(chatMessageContent);
-
         chatlog.appendChild(chatMessage);
-
         input.value = '';
         input.focus();
-
         chatlog.scrollTop = chatlog.scrollHeight;
+        // Add POST request to API here for left side messages
+        if (side === 'left') {}
       }
-    });
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
   </script>
 </body>
 </html>
