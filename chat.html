@@ -65,6 +65,7 @@
         }
     </style>
     <script>
+        chats = []
         const sendMessage = async () => {
             const user = document.getElementById('user-name').value;
             const message = document.getElementById('text-message').value;
@@ -74,6 +75,11 @@
             }
             
             document.getElementById('text-message').value = "";
+            
+            chats.push({
+                'role': 'user',
+                'content': message,
+            });
 
             const url = 'https://brain-buddy.com/wp-json/ai-chatbot/v1/chat';
             const headers = {
@@ -92,7 +98,7 @@
                 "newMessage": user + " says: >> " + message + " <<",
                 "userName": "User",
                 "aiName": "GPT4",
-                "model": "gpt-4-32k",
+                "model": "gpt-4",
                 "temperature": 0.8,
                 "maxTokens": 30000,
                 "maxResults": 1,
@@ -118,6 +124,11 @@
                 responseText = "Error: No 'answer' key found in API response.";
                 console.log(responseContent);
             }
+            
+            chats.push({
+                'role': 'assistant',
+                'content': responseText,
+            });
 
             document.getElementById('output-field').innerHTML += "<br>GPT4: " + responseText;
         };
