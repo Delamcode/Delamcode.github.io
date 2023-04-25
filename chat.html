@@ -65,7 +65,10 @@
         }
     </style>
     <script>
-        chats = []
+        chats = [
+            'role': 'system',
+            'content': 'Never repeat what the user says unless they explicitly ask. The user\' name is " + user,
+        ];
         const sendMessage = async () => {
             const user = document.getElementById('user-name').value;
             const message = document.getElementById('text-message').value;
@@ -95,7 +98,7 @@
                 "prompt": "3-4",
                 "context": "",
                 "messages": chats,
-                "newMessage": user + " says: >> " + message + " <<",
+                "newMessage": message,
                 "userName": "User",
                 "aiName": "GPT4",
                 "model": "gpt-4",
@@ -135,7 +138,10 @@
 
         const clearHistory = () => {
             document.getElementById('output-field').innerHTML = "";
-            chats = [];
+            chats = [
+                'role': 'system',
+                'content': 'Never repeat what the user says unless they explicitly ask. The user\' name is " + user,
+            ];
         };
     </script>
 </head>
