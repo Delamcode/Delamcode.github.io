@@ -67,7 +67,7 @@
     <script>
         chats = [
             'role': 'system',
-            'content': 'Never repeat what the user says unless they explicitly ask. The user\' name is " + user,
+            'content': 'Never repeat what the user says unless they explicitly ask. Never talk in third person. You are talking to the user. The user\'s name is " + user,
         ];
         const sendMessage = async () => {
             const user = document.getElementById('user-name').value;
