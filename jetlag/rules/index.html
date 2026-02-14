@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html dir="auto">
+
+<head>
+    <title>Rules</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+@charset "utf-8";
+
+:root {
+    --main-bg-color: white;
+    --main-color: black;
+    --alternate-bg-color: #efefef;
+    --alternate-color: #222222;
+    --main-border-color: #BBBBBB;
+    --link-color: #627EC9;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #111111;
+        --main-color: #eeeeee;
+        --alternate-bg-color: #333333;
+        --alternate-color: #cccccc;
+        --main-border-color: #515151;
+        --link-color: #627EC9;
+    }
+}
+
+html {
+    font-size: 100%;
+    font-family: Helvetica, Arial, Freesans, clean, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 1em;
+    background: var(--main-bg-color);
+    color: var(--main-color);
+}
+
+@media (max-device-width: 480px) {}
+
+@media (min-device-width: 481px) {
+    body {
+        margin: auto;
+        max-width: 600px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--main-border-color);
+}
+
+h2 {
+    border-bottom: 1px solid var(--main-border-color);
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    background-color: inherit;
+    font-size: 14px;
+}
+
+hr {
+    height: 0.2em;
+    border: 0;
+    color: var(--main-border-color);
+    background-color: var(--main-border-color);
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+li,
+table,
+pre {
+    margin: 1em 0;
+}
+
+blockquote {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 1px solid #ddd;
+}
+
+code,
+pre {
+    border-radius: 3px;
+    background-color: var(--alternate-bg-color);
+    color: var(--alternate-color);
+}
+
+code {
+    border: 1px solid #EAEAEA;
+    margin: 0 2px;
+    padding: 0 5px;
+    background-color: var(--alternate-bg-color);
+    color: var(--alternate-color);
+}
+
+pre {
+    border: 1px solid var(--main-border-color);
+    line-height: 1.25em;
+    overflow: auto;
+    padding: 6px 10px;
+}
+
+pre>code {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:visited {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+table {
+    margin: 1em 0;
+    border: 1px solid var(--main-border-color);
+    border-collapse: collapse;
+}
+
+th {
+    padding: .25em .5em;
+    background: var(--alternate-bg-color);
+    border: 1px solid var(--main-border-color);
+}
+
+td {
+    padding: .25em .5em;
+    border: 1px solid var(--main-border-color);
+}
+
+img {
+    max-width: 90%;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Rules</h1>
+
+<h2>Teams</h2>
+
+<p>Teams (of two or more) collectively act as a single player, all hiding together when it is their turn to hide. There may be some unforseen awkwardness with how to answer certain questions that are intended for a single player, which will need to be resolved on a case-by-case basis. <em>Players must be in the same final hiding location.</em></p>
+
+<h2>Stations</h2>
+
+<p>Stations within the LPP system are allowed. They may be inactive, although must have an active station within <strong>500m</strong>. An active station is defined by having active public transport serviced by LPP at least <strong>once an hour</strong> during the game time. The hiding zone does not need to be fully inside of the map borders, but its center must be.</p>
+
+<h2>Rounds</h2>
+
+<p>At the start of each round, one player/team will become the hider, while the remaining players will band together to play as the round&#8217;s seekers. The order in which each player hides is determined at random <strong>10min</strong> before the game begins. The hider receives the hider deck, and the seekers take the investigation book. Each side also takes this rulebook to reference in case there is need for clarification or if any rule discrepancies arise.</p>
+
+<p>Optionally, the seekers might also choose to print out a map of their game area so that they can mark it as they play, and carry writing implements to take notes. Both sides should also keep at least two dice on them at all times, as these are used for various different things throughout the game.</p>
+
+<h2>Hiding</h2>
+
+<p>Each round begins with a hiding period. During this time, the hider can use their legs and public transit to travel to any transit station within the map&#8217;s boundaries. Once the hiding period has concluded, the hider must stay within their hiding zone for the rest of the round. The hiding period is determined by the game size. For this game, this is 40 minutes. All seekers should make sure to turn on some form of tracker during this period to ensure the hider can follow their movements throughout the round.</p>
+
+<p>At the end of the hiding period, the hider must be at a <strong>transit station/stop</strong> that is included in the game&#8217;s map – this now acts as the center of their hiding zone and cannot be changed (unless a move card is pulled). The hiding zone extends a certain distance in all directions from the transit station, forming a circle within which the hider may move freely until the end game begins. For this game, the hiding zone extends <strong>500m</strong> from the transit station.</p>
+
+<p>When in your hiding zone, you&#8217;re free to do whatever you like – go shopping, eat a meal, see the sights – but don&#8217;t get too distracted! Many photo questions will involve going somewhere else in your zone to take a photo of something in a fairly short window of time. You may leave the zone if needed, but your final hiding location must not require leaving your zone, as defined later.</p>
+
+<h2>Asking Questions</h2>
+
+<p>In order to gather information about the hider&#8217;s location, the seekers will have to ask questions from the investigation book. These questions can be asked at any time, as long as the previous question has been answered, and must be answered truthfully by the hider within 5 minutes, with the exception of photo questions, which must be answered within 10 minutes in small and medium games, and 20 minutes in large games. We ask hiders to make a good faith effort to answer all questions in the allotted time. However, if questions are not answered in the allowed time window, the <strong>hider&#8217;s time is paused until the question is answered, and the hider will recieve no cards in exchange for answering</strong>.</p>
+
+<p>After a question has been answered, the hider may draw and keep a certain number of cards from the hider deck, indicated below and in the investigation book, depending on the category of question asked. Once a question has been asked, it cannot be asked again unless the seekers choose to <strong>pay its cost twice</strong>. <em>So, for example, a question that would typically allow a hider to draw 3 cards and keep 1 would now allow a hider to draw 3, keep 1, then draw 3, and keep 1 again (importanty: hiders cannot draw 6 and keep 2, they must draw 3 and pull 1 two seperate times, in this example.) Should seekers want to ask a question a third time, its cost would be triple; a fourth time, the cost quadrupled, and so on.</em> <strong>Vetoed questions cannot be reasked.</strong></p>
+
+<p>As you gather information about the hider&#8217;s location, you can use the internet for research to develop your theories.</p>
+
+<h2>The End Game</h2>
+
+<p>Once the seekers have entered the hider&#8217;s hiding zone–and are no longer on a mode of transit–the end game will begin. At this point, the hider may no longer move freely; they must stay put in a publicly accessible hiding spot until they are found. During the end game, some questions may be impossible to answer due to restrictions on the hider&#8217;s movement. For example, a photo question that would require the hider to take a photo from the train station, when they are not at the train station, would not be possible. In these cases, a null answer is considered a valid answer, and the hider would still pull a card. All questions other than photo questions that must be taken from a particular location should be possible to answer during the end game.</p>
+
+<p>Once the endgame has been triggered by the seekers being off transit in the hiding zone, the endgame stays active (and the hider can&#8217;t move) until the hider is found. If the seekers enter the hiding zone without realizing and leave the zone again, the endgame still stays active. The hiders doesn&#8217;t have to announce this fact unless asked a question that would require them to move.</p>
+
+<h2>Hiding Spots</h2>
+
+<p>Hiding spots can be anywhere within your hiding zone, but they <strong>must be somewhere that is publicly accessible during all game hours</strong> (all hours you will be playing, excluding rest periods). You cannot, for example, hide in a bathroom stall, or someone&#8217;s house. This does not mean that your hiding spot has to be on literal public property, but rather that the seeker&#8217;s must be able to access it at any point during the game. You should also make sure that staying in your spot for an extended period of time will not raise any suspicions or create the potential for you to get kicked out–for this reason we&#8217;d suggest avoiding stores or other businesses, even if they&#8217;re open during all game hours.</p>
+
+<p>Your hiding spot must also be <strong>within 3m of a marked path or road</strong> on Google Maps - no wandering off into the wilderness or swimming out to sea - and must be accessible without leaving the hiding zone. Viable paths and roads should be easy to discern on any map, but if there&#8217;s any question as to whether one counts, the test is whether or not your map app will use them for walking directions. In other words, the seekers should be able to theoretically follow a route generated by the app from the station to within 3m of your hiding spot.</p>
+
+<p><strong>Your hiding spot is considered final the moment that the end game starts</strong>. If you aren&#8217;t where you want to be when the seekers enter your hiding zone, too bad – wherever you&#8217;re standing at that moment is your hiding spot (unless you have been trapped by a photo question, as defined below). <em>If for whatever reason you aren&#8217;t somewhere publicly accessible when the end game starts, you must immediately go to the nearest possible publicly accessible spot and stay there instead. If you get forced to move, let the seekers know and move to the closest possible location.</em></p>
+
+<p>The hider is considered found once the <strong>seekers are within 2m of them and have spotted them</strong>. If the seekers are near the hider but haven&#8217;t yet identified them, then the seeker hasn&#8217;t been caught. At this point, the hider&#8217;s clock is stopped, and all time bonus cards currently in the hider&#8217;s hand are added to their time total.</p>
+
+<p>After the hider is caught, the new hider is permitted <strong>up to 10 minutes for any final planning</strong> before their hiding period begins. During this time, the new seekers should reshuffle all cards back into the deck and hand it off to the new hider, turn on their trackers, exchange the investigation book, and ensure the new hider&#8217;s tracker is turned off. They will begin the next round from the last hider&#8217;s hiding spot.
+After each player has completed the predetermined number of hiding rounds, the player with the longest single hiding run is declared the winner.</p>
+
+<h3>Miscellaneous</h3>
+
+<p>Map borders are defined by MOL. If unclear, use https://zemljevid.ljubljana.si</p>
+
+<p>If the game is not finished by 7pm, the game is paused until the next defined date of play.</p>
+
+<p>You may not use Google Street View or similar. You may not intentionally search for images of specific location (if an image appears while doing general research, it is fair game, however, you may not swipe through images, etc.)</p>
+
+<p>Anywhere with 5 or more Google Reviews is assumed to be legitimate, unless all players can agree otherwise. Anywhere with fewer than 5 Google Reviews is assumed to be illegitimate, unless all players can agree otherwise.</p>
+
+<p>In general, it is the responsibility of the seekers to clarify any ambiguity in what they are asking – for example, by sending a screenshot of everything they understand to qualify as an amusement park when asking if the hider is near one.</p>
+
+<p>In order to measure a distance, hold down anywhere on Google Maps that is not a formally listed location. A pin will pop up and if you scroll down you can select &#8220;measure distance,&#8221; then drag to measure from that point.</p>
+
+<h1>Matching Questions</h1>
+
+<p>Matching Questions follow the format, &#8220;***Is your nearest ____ the same as my ____***&#8221;. Valid answers are <strong>yes or no</strong>. Hiders have <strong>five minutes</strong> to answer.</p>
+
+<p>If locations are not within a map&#8217;s boundaries, players must operate as if they do not exist if not explicitly mentioned otherwise in the rules. After a matching question has been answered, the hider may <strong>draw 3 cards and keep 1</strong>.</p>
+
+<p>Anywhere with 5 or more Google Reviews is assumed to be legitimate, unless all players can agree otherwise. Anywhere with fewer than 5 Google Reviews is assumed to be illegitimate, unless all players can agree otherwise.</p>
+
+<p>In general, it is the responsibility of the seekers to clarify any ambiguity in what they are asking – for example, by sending a screenshot of everything they understand to qualify as an amusement park when asking if the hider is near one.</p>
+
+<h2>Transit</h2>
+
+<h3>Transit Line</h3>
+
+<p>Important: In order to ask this question, seekers must be on the form of transit, and it must be moving.</p>
+
+<p>The answer is yes if the transit the seekers are currently riding would stop at the hider&#8217;s station. For clarity, best practice is for seekers to screenshot all the stations their transit would stop at and send them to the hider.</p>
+
+<p>If the seekers are on a limited-stop/express train that passes through the hider&#8217;s station but does not stop at it, the hider should answer &#8220;no&#8221;. A &#8220;yes&#8221; answer is only given when the seekers' train would stop at the hider&#8217;s station.</p>
+
+<h3>Station Name&#8217;s Length</h3>
+
+<p>Number of characters (hyphens and spaces count) in the station, as defined by Google Maps, if the app includes the word &#8220;station,&#8221; that counts.</p>
+
+<p>When answering the station name length matching question, you must also state if your station name is longer or shorter than theirs.</p>
+
+<h3>Street or Path</h3>
+
+<p>A street or path is considered to have ended when it aquires a different name. This includes changing from, say, &#8220;Jet Lag St. East&#8221; to &#8220;Jet Lag St. West&#8221;</p>
+
+<p>If a street or path is unnamed, it is considered to start or end wherever it has an intersection.</p>
+
+<h2>Administrative Divisions</h2>
+
+<h3>Naselja</h3>
+
+<p>Pick from: <em>Besnica, Brezje pri Lipoglavu, Dolgo Brdo, Dvor, Češnjica, Črna vas, Gabrje pri Jančah, Gunclje, Janče, Javor, Lipe, Ljubljana, Mali Lipoglav, Mali Vrh pri Prežganju, Malo Trebeljevo, Medno, Pance, Podgrad, Podlipoglav, Podmolnik, Prežganje, Ravno Brdo, Rašica, Repče, Sadinja vas, Selo pri Pancah, Spodnje Gameljne, Srednje Gameljne, Stanežiče, Šentpavel, Toško Čelo, Tuji Grm, Veliki Lipoglav, Veliko Trebeljevo, Vnajnarje, Volavlje, Zagradišče, Zgornja Besnica, Zgornje Gameljne</em>. If unclear, use this map: https://zemljevid.ljubljana.si</p>
+
+<h3>Četrtne skupnosti</h3>
+
+<p>Pick from: <em>Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič</em>. If unclear, use this map: https://commons.wikimedia.org/wiki/File:MOL-CS.png</p>
+
+<h2>Natural</h2>
+
+<h3>Park</h3>
+
+<p>Anything correctly classified as a park by Google Maps, generally including a tree icon. Measure distance from the map icon.</p>
+
+<p>There&#8217;s a possibility that measuring to the map icon can lead to strange outcomes – for example, if you are in a very large park but far from the center, you may be several miles from that park&#8217;s map icon. You might be closer to the icon of a smaller, nearby park. This could mean that you are forced to say that your nearest park is the small one even though you are literally in the bigger park. Nonetheless, measuring to the map icon is the best, most objective way to handle these questions.</p>
+
+<h2>Places of Interest</h2>
+
+<h3>Museum</h3>
+
+<p>Anything correctly categorized as a museum by Google Maps. Measure distance from the map icon.</p>
+
+<h3>Movie Theater</h3>
+
+<p>Anything correctly categorized as a movie theater by Google Maps. Measure distance from the map icon.</p>
+
+<h3>Library</h3>
+
+<p>Anything correctly categorized as a library by Google Maps. Measure distance from the map icon.</p>
+
+<h3>Embassy</h3>
+
+<p>Anything correctly categorized as an embassy by Google Maps. Measure distance from the map icon.</p>
+
+<h3>Police Station</h3>
+
+<p>Police stations marked on https://zemljevid.ljubljana.si Measure distance from map icon.</p>
+
+<h1>Measuring Questions</h1>
+
+<p>Measuring questions follow the format, &#8220;<strong><em>Compared to me, are you closer to or further from ____?</em></strong>&#8221; This question must include their distance. Valid answers are <strong>closer or further</strong>. Hiders have <strong>five minutes</strong> to answer.</p>
+
+<p>It is important to note that if locations are not within a map&#8217;s boundaries, players must operate as if they do not exist. For example, if the seekers asked if they were closer to or further from an international border than the hider, but there were no international borders in the map&#8217;s boundaries, it would return a null answer (null answers count as answered questions, and hiders get to draw cards). After a measuring question has been answered, the hider may <strong>draw 3 cards and keep 1</strong>.</p>
+
+<h2>Transit</h2>
+
+<h3>Commercial Airport</h3>
+
+<p>If there is any ambiguity, an airport is considered commercial if you can view flights to/from it via Google Flights (flights.google.com)</p>
+
+<h3>Rail Station</h3>
+
+<p>Pick from: Polje, Zalog, Vodmat, Črnuče, Ljubljana, Trzin, Brinje, Ježica, Rakovnik.</p>
+
+<h2>Borders</h2>
+
+<h3>Četrtne skupnosti</h3>
+
+<p>Pick from: Bežigrad, Center, Črnuče, Dravlje, Golovec, Jarše, Moste, Polje, Posavje, Rožnik, Rudnik, Sostro, Šentvid, Šiška, Šmarna gora, Trnovo, Vič. If unclear, use this map: https://commons.wikimedia.org/wiki/File:MOL-CS.png</p>
+
+<h2>Natural</h2>
+
+<h3>Sea Level</h3>
+
+<p>This refers to a player&#8217;s altitude.
+You can find this using your phone&#8217;s compass. Fair warning: sometimes the compass is wrong, so don&#8217;t rely too heavily on this being 100% accurate.</p>
+
+<h3>Body of Water</h3>
+
+<p>Any named body of water on your maps app, including rivers, excluding pools.</p>
+
+<h3>Park</h3>
+
+<p>Anything correctly classified as a park by Google Maps, generally including a tree icon. Measure distance from the map icon.</p>
+
+<p>There&#8217;s a possibility that measuring to the map icon can lead to strange outcomes – for example, if you are in a very large park but far from the center, you may be several kilometers from that park&#8217;s map icon. You might be closer to the icon of a smaller, nearby park. This could mean that you are forced to say that your nearest park is the small one even though you are literally in the bigger park. Nonetheless, measuring to the map icon is the best, most objective way to handle these questions.</p>
+
+<h3>Forest</h3>
+
+<p>Forests marked on https://zemljevid.ljubljana.si</p>
+
+<h2>Places of Interest</h2>
+
+<h3>Museum</h3>
+
+<p>Anything correctly categorized as a museum by Google Maps. Measure distance from the map icon.</p>
+
+<h3>Movie Theater</h3>
+
+<p>Anything correctly categorized as a movie theater by Google Maps. Measure distance from the map icon.</p>
+
+<h1>Radar Questions</h1>
+
+<p>Radar questions follow the format, &#8220;<strong><em>Are you within ____ of me?</em></strong>&#8221;. This question must include their current location. Valid answers are <strong>yes or no</strong>. Hiders have <strong>five minutes</strong> to answer.</p>
+
+<p>Note that radars are asking about your location, not your hiding zone. If the radar would encompass part of your hiding zone, but not your location at the time of answering, it would be a miss. You may move back to the excluded region as your hiding zone before the end game.
+Note that GPS is not always completely accurate. After a radar question has been answered, the hider may <strong>draw 2 cards and keep 1</strong>.</p>
+
+<p>Pick from: 400m, 800m, 2km, 5km, 8km, 16km, 40km, 80km, 160km, Choose (you may use any distance you wish).</p>
+
+<h1>Thermometer Questions</h1>
+
+<p>Thermometer questions follow the format, &#8220;<strong><em>After traveling ____, am I hotter or colder?</em></strong>&#8221;. Valid answers are <strong>hotter or colder</strong>. Hiders have <strong>five minutes</strong> to answer. When starting a thermometer question, you should inform the hider that you are starting a thermometer and send them your current location. Then, after traveling a sufficient distance – measured as the crow flies – send them your new location. If the new location is closer to the hider&#8217;s current location, then you are hotter. Otherwise, you are colder. After a thermometer question has been answered, the hider may <strong>draw 2 cards and keep 1</strong>.</p>
+
+<p>If you randomize a thermometer, the seekers may be unable or unwilling to do the new thermometer. In this case, the new thermometer isn&#8217;t considered asked, but you still get to draw the cards.</p>
+
+<p>Pick from: (small) 800m, 5km, (medium) 16km, (large), 80km.</p>
+
+<h1>Photo Questions</h1>
+
+<p>Photo questions follow the format, &#8220;<strong><em>Send me a photo of ____.</em></strong>&#8221; Valid answers are *<strong>a photo that meets the full specifications of the photo question</strong>, or <strong><em>a null answer</em></strong> (null answers count as answered questions, and hiders get to draw cards) in situations where the subject of the photograph doesn&#8217;t exist in the hiding zone or is impossible to answer because the hider cannot move (during the end game). Hiders have <strong>ten minutes</strong> to answer in small and medium games. All photos must be sent in your phone&#8217;s normal aspect ratio.</p>
+
+<p>You may not use Google Street View or similar. You may not intentionally search for images of specific location (if an image appears while doing general research, it is fair game, however, you may not swipe through images, etc.)</p>
+
+<p>After a photo question has been answered, the hider may <strong>draw 1 card and keep 1</strong>.</p>
+
+<p>You are allowed to censor any text in photos you send the seekers.</p>
+
+<p>If you are asked a photo question, and the seekers arrive in your hiding zone within 10 minutes of you taking the photo, you can pause the game until you are done taking the photo and can reposition to your intended final hiding spot. During a pause, the seekers can&#8217;t move and the hide time clock is paused. This is to prevent the seekers from using a photo question to trap you in a suboptimal final hiding spot.</p>
+
+<h2>Small Games</h2>
+
+<h3>Any Building Visible from Transit Station</h3>
+
+<p>Must stand directly outside a station entrance. If there are multiple entrances, you may choose. Must include roof and both sides, with the top of the building in the top ⅓ of the frame.</p>
+
+<h3>Widest Street</h3>
+
+<p>Must include both sides of the street; does not have to include background.</p>
+
+<h3>Tree</h3>
+
+<p>Must include the entire tree.</p>
+
+<h3>Tallest Structure in Your Current Sightline</h3>
+
+<p>This is the tallest building from your perspective, not the objectively tallest building. If you can see the Burj Khalifa miles and miles away, but a nearby apartment building is taller from your perspective/sightline, you would send the apartment building.
+Must include top and both sides. The top must be in the top ⅓ of the frame.</p>
+
+<h3>You</h3>
+
+<p>Selfie mode. Phone perpendicular to ground, arm fully extended, using your phone&#8217;s default lens with no zoom.</p>
+
+<h3>The Sky</h3>
+
+<p>Place phone on ground, shoot directly up using your phone&#8217;s default lens with no zoom.</p>
+
+<h3>Trace Any Street/Path(s)</h3>
+
+<p>Street/path(s) must be visible on mapping app. All streets/paths must be continuous. Send north-south oriented. It must be at least <strong>800m</strong> long.
+This can be a little tricky to do; we have a few methods. One is to screenshot this on your phone, then use the drawing tools on your phone&#8217;s photo editing app to black out everything but the street. Another is to put a piece of paper over your phone and trace with a pen/pencil/marker. This cannot be asked in the same round as Trace Nearest Street/Path.</p>
+
+<h3>2 Buildings</h3>
+
+<p>Must include bottom and up to four stories.</p>
+
+<h2>Medium Games</h2>
+
+<h3>Tallest Building Visible from Transit Station</h3>
+
+<p>This is the tallest building from your perspective, not the objectively tallest building. If you can see the Burj Khalifa miles and miles away, but a nearby apartment building is taller from your perspective/sightline, you would send the apartment building.</p>
+
+<p>Must stand directly outside a station entrance. If there are multiple entrances, you may choose. Must include roof and both sides, with the top of the building in the top ⅓ of the frame.</p>
+
+<p>In general, the transit station itself cannot count as the tallest building visible from the transit station. The exception would be if atop the transit station is a tall building whose purpose is unrelated to the transit station. For example, atop Grand Central Station is the MetLife building. This would count as the tallest building visible from the transit station.</p>
+
+<h3>Trace Nearest Street/Path</h3>
+
+<p>Street/path must be visible on mapping app; trace intersection to intersection.</p>
+
+<p>This can be a little tricky to do; we have a few methods. One is to screenshot this on your phone, then use the drawing tools on your phone&#8217;s photo editing app to black out everything but the street. Another is to put a piece of paper over your phone and trace with a pen/pencil/marker. This cannot be asked in the same round as Trace Any Street/Path.</p>
+
+<h3>Restaurant Interior</h3>
+
+<p>No zoom. Must take the picture through the window from outside the restaurant.</p>
+
+<h3>Park</h3>
+
+<p>No zoom, phone perpendicular to the ground. Must stand 5 feet from any obstruction.</p>
+
+<h3>Grocery Store Aisle</h3>
+
+<p>No zoom. Stand at the end of the aisle, shoot directly down.</p>
+
+<h3>Place of Worship</h3>
+
+<p>Must include a 5' × 5' section with three distinct elements. The litmus test for the distinct elements is: if someone went to that place and found what you took a picture of, they could confidently match it, and be sure it wasn&#8217;t taken somewhere else.</p>
+
+<h3>Train Platform</h3>
+
+<p>Must include a 5' × 5' section with three distinct elements. The litmus test for the distinct elements is: if someone went to that place and found what you took a picture of, they could confidently match it, and be sure it wasn&#8217;t taken somewhere else.</p>
+
+<h1>The Hider Deck</h1>
+
+<p>The hider deck contains three types of cards that the hider can use to their advantage: time bonus cards, powerup cards, and curse cards. Cards are drawn after a question is answered, and kept in the hider&#8217;s hand until they are played or discarded in the discard pile. The hider can keep 6 cards in their hand at a time (unless their hand size has been expanded through a powerup.)</p>
+
+<p>If, at any point, the hider has exceeded their hand limit, they must immediately play or discard cards until they only have 6 cards remaining. The hider may not play the 7th card without first discarding or playing previous cards.</p>
+
+<h2>Time Bonuses</h2>
+
+<p>Time bonus cards come in varying values and count towards the hider&#8217;s final hiding time. These cards cannot be &#8220;played,&#8221; and the only way that they leave the hider&#8217;s hand is if they are discarded. Time bonuses are added to the hider&#8217;s final hiding time only if they are in the hider&#8217;s hand at the end of the round; discarding a time bonus means that it will no longer count towards your final hiding time.</p>
+
+<h2>Powerups</h2>
+
+<p>There are several different types of powerup cards you can draw from the hider deck. These cards can be played at any time and allow you to take a particular type of advantageous action a single time; once powerup cards have been used, they are discarded and leave your hand. You only need to inform the seekers that you are using a powerup if that powerup has some kind of direct effect on them that they need to know about. These are the powerups in the hider deck:</p>
+
+<h3>Veto</h3>
+
+<p>The veto powerup can be played in response to any question instead of answering. The seekers are given no answer to their question, and are instead informed that you have used a veto. The question cannot be reasked. Since you have not answered their question, you are given no reward and do not draw any cards from the hider deck. You may play a veto at any time during the response window after a question has been asked.</p>
+
+<h3>Randomize</h3>
+
+<p>The randomize powerup can be played in response to any question instead of answering. After the seekers have been informed that you have used a randomize powerup, they must choose–at random, either using a random number generator or dice – a different unasked question from the same category (e.g. a 10 mile radar might become a 50 mile radar.) This question is then automatically asked instead, and you provide an answer as normal. The original question is not considered to have been asked, and can therefore be asked again for its original cost. If the randomize causes a question to be asked that returns a null answer, this is permitted (tough luck, though). You may play a randomize at any time during the response window after a question has been asked.</p>
+
+<h3>Discard 1, draw 2 and Discard 2, draw 3</h3>
+
+<p>These powerups can be played at any time and allow you to dispose of some undesirable cards in your hand in exchange for new random draws. For example, if you play &#8216;Discard 1, draw 2&#8217; you will discard one undesirable card from your hand, and draw and keep two new ones. Because the &#8216;Discard 1, draw 2&#8217; card wil also leave your hand when you play it, you will end up with the same number of cards you started with. If you do not have enough extra cards to discard, these powerups cannot be played.</p>
+
+<h3>Draw 1, expand maximum hand size by 1</h3>
+
+<p>This powerup can be played at any time and immediately does two things: firstly, it allows you to draw and keep 1 card from the top of the deck. Secondly, it expands your hand to hold one extra card for the rest of the round, meaning you can keep up to 7 cards at once (or 8 if two of these powerups have been played.)</p>
+
+<h3>Duplicate</h3>
+
+<p>The duplicate powerup can be played as an exact copy of another card–curse, powerup, or time bonus–currently in your hand. Once played, the original card will remain in your hand and can still be played later. If a duplicate remains in your hand at the end of the round, it can be used as a copy of any time bonus in your hand, effectively doubling that bonus.</p>
+
+<h3>Move</h3>
+
+<p>The move powerup, if played at the right moment, can be one of the most powerful cards in the game. When played, you are granted a certain amount of time based on game size to establish a new hiding zone. The rules for finding a new hiding zone apply as usual; you must center yourself on a new transit station, and you can only use valid transit to reach your new location. While you move, your hiding timer is paused, and the seekers must stay where they are and refrain from asking questions until the move timer is up. At this point, the game resumes, and your hiding timer continues from where it was at the moment you played the move powerup. You must immediately discard your entire hand and inform the seekers of your original transit station after playing it.</p>
+
+<h2>Curses</h2>
+
+<p>Curse cards are played against the seekers as a means to slow them down, prevent them from asking questions, or just to annoy them. Every curse is unique, and has some kind of one-time effect on the seekers that lasts for a certain duration; much like powerups, once a curse has been used, it is then discarded and removed from your hand.</p>
+
+<p>Curses cannot necessarily be played at any time; each curse has a casting cost that must be met before it can be played. In some cases, these casting costs are resources that must be paid by the hider, such as discarding other cards in your hand. In other cases, these casting costs reference certain conditions of the game, such as requiring that seekers are at least 10 miles away (You may notice that, on the cards, these casting costs are sometimes different for different game sizes, which will be indicated by the game size icons next to each cost.)</p>
+
+<p>You may play multiple curses at once, but there cannot be more than one active curse preventing the seekers from asking questions or taking transit. If a curse is actively preventing the seekers from asking questions or taking transit, you must wait for the curse to be cleared before you can play another curse. In these cases, the seekers must inform you once they have cleared a curse.</p>
+
+<p>For any rule disputes, here are additional notes for each curse in the hider deck:</p>
+
+<h3>Curse of the Luxury Car</h3>
+
+<p>You must be able to identify the car in question when sending the photo, and the seekers must agree that it is, in fact, the car that you claim that it is. Use the MSRP of the car, factoring it its year of production, and disregarding any add-ons or modifications that may have been paid for. (For example: upgrades to the car&#8217;s interior, special tires, custom colors, etc.) The photo sent to the seekers must include enough of the car for it to be identifiable. All of these rules also apply to the car found by the seekers. If you cannot confirm a car&#8217;s exact production year or exact model, both sides must come to a consensus on which model and year to use for determining price.</p>
+
+<h3>Curse of the Bridge Troll</h3>
+
+<p>&#8220;Bridge&#8221; is defined as any elevated structure, acting as a path, road or railway, intended to be crossed by pedestrians, cars, or other vehicles. All seekers must have some part of their body under some part of the bridge when the next question is asked. If there are no bridges on the game map, this curse should be removed from the deck.</p>
+
+<h3>Curse of the Drained Brain</h3>
+
+<p>This curse may be used (and its price paid) during the time interval between a question and its answer, allowing a player to discard their hand before receiving the reward from a given question. You may not, however, ban the question that has just been asked, even if you have not yet answered it. Questions removed from the game using this curse cannot be asked, even for increased cost.</p>
+
+<h3>Curse of the Water Weight</h3>
+
+<p>Any liquid already traveling with the seekers at the time that this card is played (e.g. water bottles) does not count. The liquid can be in any number of containers, and can be passed back and forth between the seekers at any time. The liquid can be sat down when the seekers are stationary or on transit, but it is considered &#8220;abandoned&#8221; once it is no longer within 10 feet of any seeker. The hider must be informed of their bonus immediately. &#8220;Body of water&#8221; within this context does not necessarily mean natural, but it cannot be a pool and must be large enough to be marked on the map.</p>
+
+<h3>Curse of the Zoologist</h3>
+
+<p>&#8220;Bug&#8221; in this context refers to any insect, arachnid, diplopoda, chilopoda, or anything else that would be colloquially and commonly referred to as a &#8220;bug&#8221;. &#8220;Wild&#8221; in this context means undomesticated and not kept in human captivity, including large-scale outdoor instances of captivity, such as farms or sanctuaries. The photo must include enough of the animal to be recognizable within its category. If there is any dispute as to an animal&#8217;s classification, defer to Wikipedia. Animals outside of any of these categories (such as crustaceans) cannot be used for this curse.</p>
+
+<h3>Curse of the Egg Partner</h3>
+
+<p>The egg can be from any type of animal, but it must be a real egg (a chocolate egg or a plastic egg, for example, would not count.) Any visible fracture, however small, counts as killing the egg. If you do not want to buy items during the course of your game, or object to this curse on ethical grounds, this curse should be removed from the deck. For any other curse that requires all seekers to do something, the egg counts as a seeker. For example, using the Curse of the Lemon Phylactery after this curse has been played would require the egg to have a lemon attached to it.</p>
+
+<h3>Curse of the Jammed Door</h3>
+
+<p>Seekers must roll two d6 dice. Dice can only be rolled to enter a doorway once the doorway is visible to the seekers. For example, if you are attempting to roll to enter a train, you cannot roll the dice before the train arrives; you must be able to see the train door first. Doorways within a building that lead to other parts of the same building, such as a store within a train station, do not need to pass a dice check. If there is any reasonable dispute as to whether something counts as a seperate building, err on the side of doing a dice check. If the curse expires while a doorway is on cooldown, that cooldown also immediately expires.</p>
+
+<h3>Curse of the Spotty Memory</h3>
+
+<p>The seekers should assign die numbers to each category before their first roll. For small-sized games, which only include five categories of questions, a six would result in a reroll.</p>
+
+<h3>Curse of the Bird Guide</h3>
+
+<p>The bird must be in frame from the moment the video starts. It is considered &#8220;in frame&#8221; so long as there is any recognizable portion of the bird on camera. The seekers have unlimited attempts to accomplish this.</p>
+
+<h3>Curse of the Unguided Tourist</h3>
+
+<p>The human-built structure in question cannot be any part of a road, including curbs or sidewalks. If you are playing in a country or area with highly limited Google Street View coverage (such as Germany), this curse should be removed from the deck.</p>
+
+<h3>Curse of the Ransom Note</h3>
+
+<p>You cannot begin fulfilling the casting cost of this curse if you would be otherwise unable to play a curse; once the cost is fulfilled, this curse must be cast immediately. The printed material cannot be printed by the seekers; the letters should be gathered from magazines, newspapers, or any other material that the seekers encounter in the wild. &#8220;Coherence&#8221; in this context does not necessarily mean complete sentences, but the hider should be able to discern the meaning of the question without further clarification. You may use easy-to-understand abbreviations for certain words (such as &#8220;2&#8221; instead of &#8220;to.&#8221;) If the question requires additional context outside of the basic sentence itself, this context does NOT need to be provided in the form of a ransom note. For example, if you are asking a thermometer question, you can simply ask something along the lines of, &#8220;Went 5 miles. Hotter/colder?&#8221; Any information about where you started and ended the thermometer can be provided as normal, in the form of a location pin or text.</p>
+
+<h3>Curse of the Mediocre Travel Agent</h3>
+
+<p>&#8220;Publicly accessible&#8221; in this context follows the same rules as &#8220;publicly accessible&#8221; in the context of hiding spots. The destination does not need to be a single point; it can be a small general area like a park or store. The souvenir can be literally any physical object. It does not need to be with the seekers at all times, but it must be with them at the moment that the hider is caught.</p>
+
+<h3>Curse of the Impressionable Consumer</h3>
+
+<p>Any object or display whose primary purpose is to raise awareness of a product, service, or business counts as an advertisement. If the advertisement is for a specific service, such as a massage, the seekers must pay for and receive the service advertised. If the advertisement is for a location but not a specific service, such as an amusement park, the seekers must enter that location. Locations that are not private businesses, such as a public park, do not count. If you do not want to be forced to potentially spend money to fulfill this curse, it should be removed from the deck.</p>
+
+<h3>Curse of the U-Turn</h3>
+
+<p>&#8220;Next Station,&#8221; in this context, refers to the next station that the seekers' current mode of transit will stop at; if there are any stops along the line that their current route will skip, those should be disregarded. If you are not sure whether the seekers are on transit, or whether their route will stop at a particular station, you may ask them for that information. If there is any ambiguity, you should tell them what you believe their next station is when this curse is cast to confirm that you didn&#8217;t misread their tracker. Even if the seekers' current mode of transit would eventually bring them closer to you, this curse may still be played so long as their next station is further; a line that heads in your direction but temporarily curves away is a particularly advantageous situation for this curse.</p>
+
+<h3>Curse of the Cairn</h3>
+
+<p>You cannot begin fulfilling the casting cost of this curse if you would be otherwise unable to play a curse; once the cost is fulfilled, this cast must be cast immediately. &#8220;Found in nature,&#8221; in this context, does not necessarily mean found in a natural space or untouched by humans; it simply means that you must find the rocks yourself, and cannot buy them.</p>
+
+<h3>Curse of the Distant Cuisine</h3>
+
+<p>The restaurants used in this curse must explicit reference a single country or region within a single country within either their name or some other public-facing material such as a menu. If a restaurant associates itself with multiple countries, or a region larger than a single country (such as an &#8220;Asian&#8221; restaurant), it cannot be used for this curse. Distance from a given country is measured from your exact location to the nearest point in that country.</p>
+
+<h3>Curse of the Lemon Phylactery</h3>
+
+<p>The lemon must be a real lemon. It can be affixed using any means, but must be constantly touching the seekers&#8217;s skin or clothes. Once the lemon falls, the hider should be informed of their bonus immediately.</p>
+
+<h3>Curse of the Gambler&#8217;s Feet</h3>
+
+<p>The die rolled for this curse must be a d6. If there are multiple seekers, seekers may choose to roll independently or have one die dictate steps for all seekers at once; either is acceptable. If seekers accidentally take extra steps, they should stop and roll the die retroactively until they have made up for all the unaccounted steps. Seekers cannot take unaccounted steps on purpose. except in situation where it would be unsafe to not take extra steps (such as crossing a busy road.)</p>
+
+<h3>Curse of the Hidden Hangman</h3>
+
+<p>The chosen five-letter word must be a real word, found in a dictionary, in the language that the game is being played in. You cannot, for example, use a French word if all players only speak English. If the hider ever fails to respond to a query in 30 seconds, this curse is instantly cleared.</p>
+
+<h3>Curse of the Endless Tumble</h3>
+
+<p>100 feet is measured parallel to the ground. The die can, and likely should, be rolled on an inclined surface. If the die is lost or does not land cleanly on one side, it cannot be counted. Any bonuses awarded to the hider should be delivered immediately.</p>
+
+<h3>Curse of the Right Turn</h3>
+
+<p>This curse only applies to street intersections, meaning the intersection between two roads intended for cars (or pedestrian sidewalks along those roads.) This curse would not have any effects indoors, or in an area where there are no streets.</p>
+
+<h3>Curse of the Urban Explorer</h3>
+
+<p>Any pending questions that were asked on transit before this curse was played must still be answered. Questions can still be asked outside of transit stations, but seekers cannot be on a platform (or closer than 5m from a station) or in any building associated with the transit station when asking questions.</p>
+
+<h3>Curse of the Overflowing Chalice</h3>
+
+<p>Matching questions become draw 4, keep 1. Measuring questions become draw 4, keep 1. Thermometer questions become draw 3, keep 1. Radar questions become draw 3, keep 1. Photo questions become draw 2, keep 1. Tentacle questions become draw 5, keep 2.</p>
+
+<h3>Curse of the Labyrinth</h3>
+
+<p>&#8220;Solvable,&#8221; in this context, refers to a conventional solution to the maze–you must be able to draw an unbroken line from the start of the maze to the end of the maze. Your time limit begins from the moment you draw your first line; time spent gathering materials does not count. You may discard your maze and start drawing a new maze at any point, but you cannot restart your timer. You may not consult the internet or any other materials when drawing your maze; it must come entirely from your own head.</p>
+</body>
+
+</html>
