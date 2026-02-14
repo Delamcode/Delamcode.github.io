@@ -3,173 +3,284 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Hide & Seek Game Rules</title>
+<title>Hide & Seek – Rules</title>
+
 <style>
-  :root {
-    --bg: #f9fafb;
-    --card: #ffffff;
-    --text: #111827;
-    --muted: #6b7280;
-    --accent: #2563eb;
-    --border: #e5e7eb;
-  }
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --border: #334155;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #3b82f6;
+}
 
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.5;
-  }
+* { box-sizing: border-box; }
 
-  header {
-    padding: 1.2rem;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.25rem;
-    background: var(--card);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-  }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
 
-  main {
-    padding: 1rem;
-    max-width: 700px;
-    margin: auto;
-  }
+header {
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
 
-  section {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
+main {
+  padding: 1rem;
+  max-width: 720px;
+  margin: auto;
+}
 
-  h2 {
-    font-size: 1rem;
-    margin: 0 0 0.5rem 0;
-    color: var(--accent);
-  }
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
 
-  details {
-    margin-bottom: 0.5rem;
-  }
+h2 {
+  margin: 0 0 .75rem 0;
+  color: var(--accent);
+  font-size: 1rem;
+}
 
-  summary {
-    font-weight: 500;
-    cursor: pointer;
-    padding: 0.4rem 0;
-  }
+.option {
+  background: #0b1220;
+  border: 1px solid var(--border);
+  padding: .75rem;
+  border-radius: 10px;
+  margin-bottom: .5rem;
+  cursor: pointer;
+}
 
-  ul {
-    padding-left: 1rem;
-    margin: 0.5rem 0;
-  }
+.option:hover {
+  background: #111827;
+}
 
-  small {
-    color: var(--muted);
-  }
+.explanation {
+  display: none;
+  font-size: .9rem;
+  color: var(--muted);
+  margin-top: .4rem;
+}
 
-  footer {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--muted);
-    padding: 1rem;
-  }
+.option.active .explanation {
+  display: block;
+}
+
+small {
+  display: block;
+  color: var(--muted);
+  font-size: .8rem;
+  margin-top: .5rem;
+}
+
+footer {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--muted);
+  padding: 1rem;
+}
 </style>
 </head>
+
 <body>
 
-<header>
-  Hide & Seek – Game Rules
-</header>
+<header>Hide & Seek – Quick Rules</header>
 
 <main>
 
+<!-- MATCHING -->
+
 <section>
-  <h2>Matching Questions</h2>
-  <p><strong>Format:</strong> “Is your nearest ____ the same as my ____?”</p>
-  <p><strong>Answer:</strong> Yes / No</p>
-  <p><strong>Time:</strong> 5 minutes</p>
-  <small>After answering: Draw 3 cards, keep 1.</small>
+<h2>Matching Questions</h2>
+<p>“Is your nearest ____ the same as my ____?”</p>
+<small>Answer: Yes / No • 5 min • Draw 3 keep 1</small>
+
+<div class="option">
+  Transit
+  <div class="explanation">
+    Transit Line (must be moving). Yes only if your train would stop at their station.  
+    Station Name Length (count spaces & hyphens, include “station” if shown).  
+    Street/Path ends when name changes.
+  </div>
+</div>
+
+<div class="option">
+  Administrative Divisions
+  <div class="explanation">
+    Naselja and Četrtne skupnosti must match exactly from the rules.
+  </div>
+</div>
+
+<div class="option">
+  Natural
+  <div class="explanation">
+    Park = Google Maps tree icon. Measure distance from the map icon.
+  </div>
+</div>
+
+<div class="option">
+  Places of Interest
+  <div class="explanation">
+    Museum, Movie Theater, Library, Embassy, Police Station.  
+    Must match Google Maps categorization.
+  </div>
+</div>
+
 </section>
 
+<!-- MEASURING -->
+
 <section>
-  <h2>Measuring Questions</h2>
-  <p><strong>Format:</strong> “Compared to me, are you closer to or further from ____?”</p>
-  <p><strong>Answer:</strong> Closer / Further</p>
-  <p><strong>Must include:</strong> Their distance</p>
-  <small>After answering: Draw 3 cards, keep 1.</small>
+<h2>Measuring Questions</h2>
+<p>“Compared to me, are you closer to or further from ____?”</p>
+<small>Answer: Closer / Further • Include their distance • Draw 3 keep 1</small>
+
+<div class="option">
+  Transit
+  <div class="explanation">
+    Rail Stations: Polje, Zalog, Vodmat, Črnuče, Ljubljana, Trzin, Brinje, Ježica, Rakovnik.
+  </div>
+</div>
+
+<div class="option">
+  Borders
+  <div class="explanation">
+    Distance to Četrtne skupnosti borders based on official map.
+  </div>
+</div>
+
+<div class="option">
+  Natural
+  <div class="explanation">
+    Sea Level (altitude).  
+    Body of Water (named, not pools).  
+    Park (Google Maps icon).  
+    Forest (official map).
+  </div>
+</div>
+
+<div class="option">
+  Places of Interest
+  <div class="explanation">
+    Museum and Movie Theater categorized by Google Maps.
+  </div>
+</div>
+
+<div class="option">
+  Null Rule
+  <div class="explanation">
+    If the feature does not exist within map boundaries, answer is null.
+  </div>
+</div>
+
 </section>
 
+<!-- RADAR -->
+
 <section>
-  <h2>Radar Questions</h2>
-  <p><strong>Format:</strong> “Are you within ____ of me?”</p>
-  <p><strong>Distances:</strong> 400m, 800m, 2km, 5km, 8km, 16km, 40km, 80km, 160km, or custom</p>
-  <p><strong>Answer:</strong> Yes / No</p>
-  <small>After answering: Draw 2 cards, keep 1.</small>
+<h2>Radar Questions</h2>
+<p>“Are you within ____ of me?”</p>
+<small>Answer: Yes / No • Draw 2 keep 1</small>
+
+<div class="option">
+  Distance Options
+  <div class="explanation">
+    400m, 800m, 2km, 5km, 8km, 16km, 40km, 80km, 160km, or custom.
+  </div>
+</div>
+
+<div class="option">
+  Current Location Rule
+  <div class="explanation">
+    Radar checks your exact current position, not your hiding zone.
+  </div>
+</div>
+
 </section>
 
+<!-- THERMOMETER -->
+
 <section>
-  <h2>Thermometer Questions</h2>
-  <p><strong>Format:</strong> “After traveling ____, am I hotter or colder?”</p>
-  <p><strong>Sizes:</strong> 800m, 5km, 16km, 80km</p>
-  <p><strong>Answer:</strong> Hotter / Colder</p>
-  <small>After answering: Draw 2 cards, keep 1.</small>
+<h2>Thermometer Questions</h2>
+<p>“After traveling ____, am I hotter or colder?”</p>
+<small>Answer: Hotter / Colder • Draw 2 keep 1</small>
+
+<div class="option">
+  Sizes
+  <div class="explanation">
+    800m, 5km, 16km, 80km.
+  </div>
+</div>
+
+<div class="option">
+  How It Works
+  <div class="explanation">
+    If seeker’s new location is closer to you → Hotter.  
+    Otherwise → Colder.
+  </div>
+</div>
+
 </section>
 
-<section>
-  <h2>Photo Questions</h2>
-  <p><strong>Answer:</strong> Valid photo OR null</p>
-  <p><strong>Time:</strong> 10 minutes (small & medium)</p>
-  <small>After answering: Draw 1 card, keep 1.</small>
-
-  <details>
-    <summary>Small Game Photos</summary>
-    <ul>
-      <li>Any Building Visible from Transit Station</li>
-      <li>Widest Street</li>
-      <li>Tree (entire tree)</li>
-      <li>Tallest Structure in Sightline</li>
-      <li>You (selfie, default lens)</li>
-      <li>The Sky</li>
-      <li>Trace Any Street (800m+)</li>
-      <li>2 Buildings</li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Medium Game Photos</summary>
-    <ul>
-      <li>Tallest Building Visible from Transit Station</li>
-      <li>Trace Nearest Street</li>
-      <li>Restaurant Interior (from outside)</li>
-      <li>Park</li>
-      <li>Grocery Store Aisle</li>
-      <li>Place of Worship</li>
-      <li>Train Platform</li>
-    </ul>
-  </details>
-</section>
+<!-- PHOTO -->
 
 <section>
-  <h2>Key Rules</h2>
-  <ul>
-    <li>Use Google Maps classification.</li>
-    <li>Measure distance from map icons.</li>
-    <li>If outside map boundaries → treat as nonexistent.</li>
-    <li>Seekers must clarify ambiguous questions.</li>
-    <li>GPS may not be perfectly accurate.</li>
-  </ul>
+<h2>Photo Questions</h2>
+<small>10 min • Valid photo or null • Draw 1 keep 1</small>
+
+<div class="option">
+  Small Game
+  <div class="explanation">
+    Building from Transit Station, Widest Street, Tree, Tallest Structure,  
+    You (Selfie), Sky, Trace 800m Street, 2 Buildings.
+  </div>
+</div>
+
+<div class="option">
+  Medium Game
+  <div class="explanation">
+    Tallest Building from Transit Station, Trace Nearest Street,  
+    Restaurant Interior, Park, Grocery Aisle, Place of Worship, Train Platform.
+  </div>
+</div>
+
+<div class="option">
+  Photo Rules
+  <div class="explanation">
+    No zoom. Default lens. Must meet full framing requirements.  
+    No Street View or intentional image searching.
+  </div>
+</div>
+
 </section>
 
 </main>
 
 <footer>
-  Minimal • Mobile-Friendly • Static HTML
+Thanks to the Jet Lag team
 </footer>
+
+<script>
+document.querySelectorAll(".option").forEach(option => {
+  option.addEventListener("click", () => {
+    option.classList.toggle("active");
+  });
+});
+</script>
 
 </body>
 </html>
