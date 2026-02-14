@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hide & Seek Game Rules</title>
+<style>
+  :root {
+    --bg: #f9fafb;
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --border: #e5e7eb;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  header {
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+  }
+
+  main {
+    padding: 1rem;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--accent);
+  }
+
+  details {
+    margin-bottom: 0.5rem;
+  }
+
+  summary {
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.4rem 0;
+  }
+
+  ul {
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  small {
+    color: var(--muted);
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+    padding: 1rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  Hide & Seek – Game Rules
+</header>
+
+<main>
+
+<section>
+  <h2>Matching Questions</h2>
+  <p><strong>Format:</strong> “Is your nearest ____ the same as my ____?”</p>
+  <p><strong>Answer:</strong> Yes / No</p>
+  <p><strong>Time:</strong> 5 minutes</p>
+  <small>After answering: Draw 3 cards, keep 1.</small>
+</section>
+
+<section>
+  <h2>Measuring Questions</h2>
+  <p><strong>Format:</strong> “Compared to me, are you closer to or further from ____?”</p>
+  <p><strong>Answer:</strong> Closer / Further</p>
+  <p><strong>Must include:</strong> Their distance</p>
+  <small>After answering: Draw 3 cards, keep 1.</small>
+</section>
+
+<section>
+  <h2>Radar Questions</h2>
+  <p><strong>Format:</strong> “Are you within ____ of me?”</p>
+  <p><strong>Distances:</strong> 400m, 800m, 2km, 5km, 8km, 16km, 40km, 80km, 160km, or custom</p>
+  <p><strong>Answer:</strong> Yes / No</p>
+  <small>After answering: Draw 2 cards, keep 1.</small>
+</section>
+
+<section>
+  <h2>Thermometer Questions</h2>
+  <p><strong>Format:</strong> “After traveling ____, am I hotter or colder?”</p>
+  <p><strong>Sizes:</strong> 800m, 5km, 16km, 80km</p>
+  <p><strong>Answer:</strong> Hotter / Colder</p>
+  <small>After answering: Draw 2 cards, keep 1.</small>
+</section>
+
+<section>
+  <h2>Photo Questions</h2>
+  <p><strong>Answer:</strong> Valid photo OR null</p>
+  <p><strong>Time:</strong> 10 minutes (small & medium)</p>
+  <small>After answering: Draw 1 card, keep 1.</small>
+
+  <details>
+    <summary>Small Game Photos</summary>
+    <ul>
+      <li>Any Building Visible from Transit Station</li>
+      <li>Widest Street</li>
+      <li>Tree (entire tree)</li>
+      <li>Tallest Structure in Sightline</li>
+      <li>You (selfie, default lens)</li>
+      <li>The Sky</li>
+      <li>Trace Any Street (800m+)</li>
+      <li>2 Buildings</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Medium Game Photos</summary>
+    <ul>
+      <li>Tallest Building Visible from Transit Station</li>
+      <li>Trace Nearest Street</li>
+      <li>Restaurant Interior (from outside)</li>
+      <li>Park</li>
+      <li>Grocery Store Aisle</li>
+      <li>Place of Worship</li>
+      <li>Train Platform</li>
+    </ul>
+  </details>
+</section>
+
+<section>
+  <h2>Key Rules</h2>
+  <ul>
+    <li>Use Google Maps classification.</li>
+    <li>Measure distance from map icons.</li>
+    <li>If outside map boundaries → treat as nonexistent.</li>
+    <li>Seekers must clarify ambiguous questions.</li>
+    <li>GPS may not be perfectly accurate.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  Minimal • Mobile-Friendly • Static HTML
+</footer>
+
+</body>
+</html>
