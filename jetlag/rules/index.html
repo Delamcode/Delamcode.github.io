@@ -9,9 +9,9 @@
 @charset "utf-8";
 
 :root {
-    --main-bg-color: white;
+    --main-bg-color: rgba(255, 255, 255, 0.952);
     --main-color: black;
-    --alternate-bg-color: #efefef;
+    --alternate-bg-color: #f6f6f6;
     --alternate-color: #222222;
     --main-border-color: #BBBBBB;
     --link-color: #627EC9;
@@ -30,13 +30,14 @@
 
 html {
     font-size: 100%;
-    font-family: Helvetica, Arial, Freesans, clean, sans-serif;
+    font-family: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+    line-height: 1.4;
 }
 
 body {
     margin: 0;
     padding: 1em;
-    background: var(--main-bg-color);
+    background-color: var(--main-bg-color);
     color: var(--main-color);
 }
 
@@ -49,107 +50,71 @@ body {
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 2rem;
-    border-bottom: 1px solid var(--main-border-color);
-}
-
-h2 {
-    border-bottom: 1px solid var(--main-border-color);
-    font-size: 1.75rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-h4 {
-    font-size: 1.25em;
-}
-
-h5 {
-    font-size: 1rem;
-}
-
-h6 {
-    background-color: inherit;
-    font-size: 14px;
-}
-
-hr {
-    height: 0.2em;
-    border: 0;
-    color: var(--main-border-color);
-    background-color: var(--main-border-color);
-}
-
-p,
-blockquote,
-ul,
-ol,
-dl,
-li,
-table,
-pre {
-    margin: 1em 0;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
 }
 
 blockquote {
-    margin-left: 1em;
-    padding-left: 1em;
-    border-left: 1px solid #ddd;
-}
-
-code,
-pre {
-    border-radius: 3px;
+    font-style: italic;
+    margin: 1.5em 1.5em;
+    padding: .5em 1em;
+    border-left: 2px solid var(--main-border-color);
     background-color: var(--alternate-bg-color);
     color: var(--alternate-color);
+    border-radius: 3px;
+}
+
+blockquote p:first-child {
+    margin-top: .25em;
+}
+
+blockquote p:last-child {
+    margin-bottom: .25em;
+}
+
+hr {
+    display: block;
+    border: 0;
+    border-top: 1px solid var(--main-border-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+pre {
+    display: block;
+    overflow: scroll;
+    max-width: 100%;
+    background-color: var(--alternate-bg-color);
+    padding: .5em 1em;
+    margin: 1em 0;
+    border: 1px dotted var(--main-border-color);
+    border-radius: 3px;
 }
 
 code {
-    border: 1px solid #EAEAEA;
-    margin: 0 2px;
-    padding: 0 5px;
     background-color: var(--alternate-bg-color);
     color: var(--alternate-color);
-}
-
-pre {
-    border: 1px solid var(--main-border-color);
-    line-height: 1.25em;
-    overflow: auto;
-    padding: 6px 10px;
+    font-family: Menlo, Courier, sans-serif;
+    font-size: .85em;
+    padding: 2px 3px;
+    border: 1px dotted var(--main-border-color);
+    border-radius: 3px;
 }
 
 pre>code {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-a,
-a:visited {
-    color: var(--link-color);
-    text-decoration: none;
+    border: none;
 }
 
 table {
-    margin: 1em 0;
+    margin: 1.5em 0;
     border: 1px solid var(--main-border-color);
     border-collapse: collapse;
 }
 
 th {
+    font-weight: 500;
     padding: .25em .5em;
     background: var(--alternate-bg-color);
     border: 1px solid var(--main-border-color);
@@ -161,7 +126,7 @@ td {
 }
 
 img {
-    max-width: 90%;
+    max-width: 100%;
 }
     </style>
 </head>
@@ -463,6 +428,8 @@ This can be a little tricky to do; we have a few methods. One is to screenshot t
 <p>The hider deck contains three types of cards that the hider can use to their advantage: time bonus cards, powerup cards, and curse cards. Cards are drawn after a question is answered, and kept in the hider&#8217;s hand until they are played or discarded in the discard pile. The hider can keep 6 cards in their hand at a time (unless their hand size has been expanded through a powerup.)</p>
 
 <p>If, at any point, the hider has exceeded their hand limit, they must immediately play or discard cards until they only have 6 cards remaining. The hider may not play the 7th card without first discarding or playing previous cards.</p>
+
+<p>Discarded and used cards should be stored in a separate pile and cannot be drawn again in the active run.</p>
 
 <h2>Time Bonuses</h2>
 
