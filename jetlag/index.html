@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html dir="auto">
+
+<head>
+    <title>Jet Lag: The Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+@charset "utf-8";
+
+:root {
+    --main-bg-color: rgba(255, 255, 255, 0.952);
+    --main-color: black;
+    --alternate-bg-color: #f6f6f6;
+    --alternate-color: #222222;
+    --main-border-color: #BBBBBB;
+    --link-color: #627EC9;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #111111;
+        --main-color: #eeeeee;
+        --alternate-bg-color: #333333;
+        --alternate-color: #cccccc;
+        --main-border-color: #515151;
+        --link-color: #627EC9;
+    }
+}
+
+html {
+    font-size: 100%;
+    font-family: "Avenir Next", "Avenir", -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+    line-height: 1.4;
+}
+
+body {
+    margin: 0;
+    padding: 1em;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}
+
+@media (max-device-width: 480px) {}
+
+@media (min-device-width: 481px) {
+    body {
+        margin: auto;
+        max-width: 600px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 1.5em 1.5em;
+    padding: .5em 1em;
+    border-left: 2px solid var(--main-border-color);
+    background-color: var(--alternate-bg-color);
+    color: var(--alternate-color);
+    border-radius: 3px;
+}
+
+blockquote p:first-child {
+    margin-top: .25em;
+}
+
+blockquote p:last-child {
+    margin-bottom: .25em;
+}
+
+hr {
+    display: block;
+    border: 0;
+    border-top: 1px solid var(--main-border-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+pre {
+    display: block;
+    overflow: scroll;
+    max-width: 100%;
+    background-color: var(--alternate-bg-color);
+    padding: .5em 1em;
+    margin: 1em 0;
+    border: 1px dotted var(--main-border-color);
+    border-radius: 3px;
+}
+
+code {
+    background-color: var(--alternate-bg-color);
+    color: var(--alternate-color);
+    font-family: Menlo, Courier, sans-serif;
+    font-size: .85em;
+    padding: 2px 3px;
+    border: 1px dotted var(--main-border-color);
+    border-radius: 3px;
+}
+
+pre>code {
+    border: none;
+}
+
+table {
+    margin: 1.5em 0;
+    border: 1px solid var(--main-border-color);
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: 500;
+    padding: .25em .5em;
+    background: var(--alternate-bg-color);
+    border: 1px solid var(--main-border-color);
+}
+
+td {
+    padding: .25em .5em;
+    border: 1px solid var(--main-border-color);
+}
+
+img {
+    max-width: 100%;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Jet Lag: The Game</h1>
+
+<p><a href="delamcode.github.io/jetlag/rules">Rules</a></p>
+
+<p><a href="delamcode.github.io/jetlag/seeking">Questions</a></p>
+
+<p><a href="https://taibeled.github.io/JetLagHideAndSeek/">Map Generator</a></p>
+
+<p><a href="https://zemljevid.ljubljana.si/">City Map</a></p>
+
+<p><a href="https://www.lifack.ch/cards">Cards</a></p>
+</body>
+
+</html>
